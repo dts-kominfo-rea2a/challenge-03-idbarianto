@@ -25,7 +25,7 @@ const dataBelanjaan = [
 const listBelanjaan = (dataArrBelanjaan) => {
   let returnVariable = []; // set empty array
   for (let i = 0; i < dataArrBelanjaan.length; i++) {
-    returnVariable.push(" - " + dataArrBelanjaan[i].nama + " x " + dataArrBelanjaan[i].kuantitas);
+    returnVariable.push("- " + dataArrBelanjaan[i].nama + " x " + dataArrBelanjaan[i].kuantitas);
   }
   return returnVariable;
 };
@@ -54,6 +54,9 @@ const main = () => {
   console.log(
     "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
   );
+
+  console.log("################");
+  console.log(listBelanjaan(dataBelanjaan)[0])
 };
 
 main();
